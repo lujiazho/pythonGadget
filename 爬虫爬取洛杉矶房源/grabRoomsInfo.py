@@ -29,7 +29,7 @@ def endnote(document):
 def getHtml(url):    
     # 借助user-agent
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.100 Safari/537.36'
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36'
     }
     # 借助requests获取响应对象
     response = requests.get(url=url, headers=headers)
@@ -48,16 +48,17 @@ for page in range(1, 29):
     content = bs4.find_all(name="li", attrs={"class": "mortar-wrapper"})
     selecter=etree.HTML(html)
     
-    for room in content:
-        title = selecter.xpath('//*[@id="placardContainer"]/ul/li[1]/article/header/div[1]/a/div[1]/span')[0].xpath('string(.)')
-        addr = selecter.xpath('//*[@id="placardContainer"]/ul/li[1]/article/header/div[1]/a/div[2]')[0].xpath('string(.)')
+    for index in range(1, len(content)+1):
+        title = selecter.xpath(f'//*[@id="placardContainer"]/ul/li[{index}]/article/header/div[1]/a/div[1]/span')[0].xpath('string(.)')
+        addr = selecter.xpath(f'//*[@id="placardContainer"]/ul/li[{index}]/article/header/div[1]/a/div[2]')[0].xpath('string(.)')
         # 房屋链接
-        roomlink = selecter.xpath('//*[@id="placardContainer"]/ul/li[1]/article')[0].xpath('@data-url')[0]
+        roomlink = selecter.xpath(f'//*[@id="placardContainer"]/ul/li[{index}]/article')[0].xpath('@data-url')[0]
         rooms.append([title, addr, roomlink])
         
-        prefix = selecter.xpath('//*[@id="placardContainer"]/ul/li[1]/article/section/div')[0]
+        prefix = selecter.xpath(f'//*[@id="placardContainer"]/ul/li[{index}]/article/section/div')[0]
         # 图片链接
-        picsrc = prefix.xpath('./div[1]/div[2]/div[2]/ul/li[1]/a')[0].xpath('@href')[0]
+        picsrc = prefix.xpath('./div[1]/div[2]/div[2]/ul/li[1]/a')
+        picsrc = picsrc[0].xpath('@href')[0] if len(picsrc)>0 else "无"
         # Virtual Tour
         VRtour = prefix.xpath('./div[1]/div[2]/div[2]/ul/li[2]/a')
         VRtour = VRtour[0].xpath('@href')[0] if len(VRtour)>0 else "无"
