@@ -2,7 +2,7 @@ from selenium.webdriver import Chrome
 import random
 import time
 
-comments = {
+comments = [
     '由浅入深，适合有基础的技术人员。大佬可否给小弟回个赞感谢万分',
     '作者辛苦了，学习的道路上一起进步。期待大佬的回访和关注~',
     '创作不易，给你打气，继续创作优质好文！',
@@ -22,7 +22,7 @@ comments = {
     '写得好，很nice，欢迎一起交流！',
     '果然是大佬，就是和我们这种普通开发不一样！',
     '满满的干货，我嗅到了知识的芬芳~'
-}
+]
 
 driver = Chrome()
 driver.maximize_window()
