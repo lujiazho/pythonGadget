@@ -1,4 +1,4 @@
 # simple demonstration
 <center class="half">
-  <img src="https://github.com/leaving-voider/Android-based_Fashion_Dection_in_real_time/blob/master/sources/detect.gif" width="200"/>
+  <img src="https://github.com/lujiazho/pythonGadget/blob/main/opencv/pingpang_by_hand/demonstration.gif" width="800"/>
 </center>
