@@ -1,4 +1,5 @@
-用平面坐标系上的点$(x_i,y_i)$描述个体，假设任意健康个体$A_i(x_i,y_i)$和病毒携带个体$B_j(x_j,y_j)$之间的距离为$d_{ij}$，病毒携带者$B_j$向$A_i$传播病毒并使$A_i$感染的几率为$p_{ij}$，二者的关系用式$\eqref{eq1}$描述
+用平面坐标系上的点![formula](https://render.githubusercontent.com/render/math?math=(x_i,y_i))描述个体，假设任意健康个体![formula](https://render.githubusercontent.com/render/math?math=A_i(x_i,y_i))和病毒携带个体![formula](https://render.githubusercontent.com/render/math?math=B_j(x_j,y_j))之间的距离为![formula](https://render.githubusercontent.com/render/math?math=d_{ij})，病毒携带者![formula](https://render.githubusercontent.com/render/math?math=B_j)向![formula](https://render.githubusercontent.com/render/math?math=A_i)传播病毒并使![formula](https://render.githubusercontent.com/render/math?math=B_j)向![formula](https://render.githubusercontent.com/render/math?math=A_i)感染的几率为![formula](https://render.githubusercontent.com/render/math?math=p_{ij})，二者的关系用式![formula](https://render.githubusercontent.com/render/math?math=\eqref{eq1})描述
+
 $$
 p_{ij}(d_{ij})=
 \begin{cases}
