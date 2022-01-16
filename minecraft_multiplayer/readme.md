@@ -1,4 +1,7 @@
 # A simple multiplayer minecraft with ursina
+<center class="half">
+  <img src="https://github.com/lujiazho/pythonGadget/blob/main/minecraft_multiplayer/minecraft_multiplayer.gif" width="600"/>
+</center>
 
 # Run
 The server(server.py) and client(main.py) should be under the same LAN (such as the same wifi)
