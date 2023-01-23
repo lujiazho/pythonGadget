@@ -1,0 +1,1 @@
+if stops somewhere, that might be the correct answer, just stop this program and use it to extract manually
