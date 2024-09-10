@@ -1,2 +1,2 @@
 # pythonGadget
-Personal python project
+Personal python scripts
